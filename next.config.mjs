@@ -4,17 +4,9 @@ const withMDX = createMDX();
 
 /** @type {import('next').NextConfig} */
 const config = {
+    output: "export",
     reactStrictMode: true,
-    images: {
-        dangerouslyAllowSVG: true,
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "img.shields.io",
-                pathname: "/badge/**",
-            },
-        ],
-    },
+    images: { unoptimized: true },
 };
 
 export default withMDX(config);
