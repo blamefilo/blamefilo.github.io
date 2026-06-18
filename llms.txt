@@ -1,6 +1,6 @@
 # Docs
 
-- [☁️ filo studios.](/docs): The main entry point for the project documentation.
+- [☁️ filo studios.](/docs): Welcome to filo studios.
 - filo_vehiclekeys
   - [filo_vehiclekeys](/docs/filo_vehiclekeys): A fully refactored vehicle key management and locksmith system for FiveM.
   - [Compatibility](/docs/filo_vehiclekeys/compatibility): Drop-in support for qb-vehiclekeys, and qbx_vehiclekeys.
