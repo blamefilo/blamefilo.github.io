@@ -1,8 +1,10 @@
 ---
-title: filo_vehiclekeys
+title: 🔑 filo_vehiclekeys
 description: A fully refactored vehicle key management and locksmith system for FiveM.
+icon: <KeyRoundIcon />
 ---
 
+import { KeyRoundIcon } from 'lucide-react';
 import { Callout } from 'fumadocs-ui/components/callout';
 import { Cards, Card } from 'fumadocs-ui/components/card';
 
@@ -30,8 +32,7 @@ with an NPC fallback store when no locksmiths are on duty.
 - ox_target and textui interaction support
 - filo_blips integration with native blip fallback
 - MySQL-backed vehicle data storage with automatic table creation
-- One-time migration from legacy `.bin` storage
-- Drop-in compatibility with qb-vehiclekeys, qbx_vehiclekeys, and plrs_vehiclekeys
+- Drop-in compatibility with qb-vehiclekeys, qbx_vehiclekeys, and previous version of filo_vehiclekey.
 
 ## Pages
 
@@ -40,5 +41,5 @@ with an NPC fallback store when no locksmiths are on duty.
   <Card title="Configuration" href="/docs/filo_vehiclekeys/configuration" description="Full breakdown of every config option available." />
   <Card title="Flows" href="/docs/filo_vehiclekeys/flows" description="How mechanical key cutting, OBD programming, and the NPC store work." />
   <Card title="Exports" href="/docs/filo_vehiclekeys/exports" description="Client and server exports for use in other resources." />
-  <Card title="Compatibility" href="/docs/filo_vehiclekeys/compatibility" description="Drop-in support for qb-vehiclekeys, qbx_vehiclekeys, and plrs_vehiclekeys." />
+  <Card title="Compatibility" href="/docs/filo_vehiclekeys/compatibility" description="Drop-in support for qb-vehiclekeys, qbx_vehiclekeys, and previous version of filo_vehiclekey." />
 </Cards>
