@@ -11,14 +11,52 @@ export function baseOptions(): BaseLayoutProps {
         githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
         links: [
             {
-                icon: <StoreIcon />,
+                icon: (
+                    <img
+                        src="/static/tebex-transparent.png"
+                        width={22}
+                        className="opacity-75 hover:opacity-100"
+                    />
+                ),
                 text: "Store",
                 url: `https://filo-studios.tebex.io/`,
             },
             {
-                icon: <UsersRoundIcon />,
+                icon: (
+                    <img
+                        src="/static/discord.png"
+                        width={22}
+                        className="opacity-75 hover:opacity-100"
+                    />
+                ),
                 text: "Discord",
                 url: `https://discord.gg/aTAU7hBdaa`,
+            },
+            {
+                type: "icon",
+                label: "Discord",
+                icon: (
+                    <img
+                        src="/static/discord.png"
+                        width={22}
+                        className="opacity-75 hover:opacity-100"
+                    />
+                ),
+                text: "Discord",
+                url: "https://discord.gg/aTAU7hBdaa",
+            },
+            {
+                type: "icon",
+                label: "Tebex",
+                icon: (
+                    <img
+                        src="/static/tebex-transparent.png"
+                        width={22}
+                        className="opacity-75 hover:opacity-100"
+                    />
+                ),
+                text: "Tebex",
+                url: "https://filo-studios.tebex.io/",
             },
         ],
     };
