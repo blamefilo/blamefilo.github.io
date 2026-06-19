@@ -4,8 +4,6 @@
 
 
 
-# Compatibility [#compatibility]
-
 `filo_vehiclekeys` includes built-in compatibility layers for common vehicle key resources.
 Existing scripts that target these resources will continue to work without modification.
 

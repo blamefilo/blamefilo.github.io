@@ -4,8 +4,6 @@
 
 
 
-# Installation [#installation]
-
 ## Dependencies [#dependencies]
 
 | Resource                                                           | Required | Notes                               |

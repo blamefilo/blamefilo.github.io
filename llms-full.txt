@@ -68,8 +68,6 @@ cfx.re only allow scripts to be transferred 1 time, so you won't be able to tran
 
 
 
-# Compatibility [#compatibility]
-
 `filo_vehiclekeys` includes built-in compatibility layers for common vehicle key resources.
 Existing scripts that target these resources will continue to work without modification.
 
@@ -121,8 +119,6 @@ exports.qbx_vehiclekeys:HasKeys(vehicle) -- returns boolean
 
 
 
-
-# Configuration [#configuration]
 
 ## General [#general]
 
@@ -261,8 +257,6 @@ Config.JobKeys = true   -- Allow job-restricted key access (e.g. police vehicles
 # Exports (/docs/paid_resources/filo_vehiclekeys/exports)
 
 
-
-# Exports [#exports]
 
 ## Server [#server]
 
@@ -441,8 +435,6 @@ exports.filo_vehiclekeys:RemoveTempKeysByPlate(plate --[[string]])
 
 
 
-# Flows [#flows]
-
 ## Mechanical Key Cutting [#mechanical-key-cutting]
 
 Used for non-electric vehicles. Can be triggered in two ways.
@@ -611,8 +603,6 @@ Cancelling the progress bar or failing the minigame aborts the flow with no item
 
 
 
-# filo\_vehiclekeys [#filo_vehiclekeys]
-
 [![Buy on Tebex](https://img.shields.io/badge/Tebex-blue?style=for-the-badge\&logo=tebex)](https://filo-studios.tebex.io/package/filo-vehiclekeys)
 
 Duplicate keys, program key fobs, and manage locksmith interactions for FiveM servers.
@@ -658,8 +648,6 @@ with an NPC fallback store when no locksmiths are on duty.
 
 
 
-
-# Installation [#installation]
 
 ## Dependencies [#dependencies]
 

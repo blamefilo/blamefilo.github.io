@@ -4,8 +4,6 @@
 
 
 
-# Configuration [#configuration]
-
 ## General [#general]
 
 ```lua
