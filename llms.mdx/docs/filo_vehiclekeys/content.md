@@ -1,4 +1,4 @@
-# filo_vehiclekeys (/docs/filo_vehiclekeys)
+# 🔑 filo_vehiclekeys (/docs/filo_vehiclekeys)
 
 
 
@@ -29,8 +29,7 @@ with an NPC fallback store when no locksmiths are on duty.
 * ox\_target and textui interaction support
 * filo\_blips integration with native blip fallback
 * MySQL-backed vehicle data storage with automatic table creation
-* One-time migration from legacy `.bin` storage
-* Drop-in compatibility with qb-vehiclekeys, qbx\_vehiclekeys, and plrs\_vehiclekeys
+* Drop-in compatibility with qb-vehiclekeys, qbx\_vehiclekeys, and previous version of filo\_vehiclekey.
 
 ## Pages [#pages]
 
@@ -43,5 +42,5 @@ with an NPC fallback store when no locksmiths are on duty.
 
   <Card title="Exports" href="/docs/filo_vehiclekeys/exports" description="Client and server exports for use in other resources." />
 
-  <Card title="Compatibility" href="/docs/filo_vehiclekeys/compatibility" description="Drop-in support for qb-vehiclekeys, qbx_vehiclekeys, and plrs_vehiclekeys." />
+  <Card title="Compatibility" href="/docs/filo_vehiclekeys/compatibility" description="Drop-in support for qb-vehiclekeys, qbx_vehiclekeys, and previous version of filo_vehiclekey." />
 </Cards>
