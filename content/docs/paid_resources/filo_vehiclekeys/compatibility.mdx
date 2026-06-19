@@ -1,0 +1,53 @@
+---
+title: Compatibility
+description: Drop-in support for qb-vehiclekeys, and qbx_vehiclekeys.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+
+# Compatibility
+
+`filo_vehiclekeys` includes built-in compatibility layers for common vehicle key resources.
+Existing scripts that target these resources will continue to work without modification.
+
+## qb-vehiclekeys
+
+The following net event is handled:
+
+```lua
+TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys', plate)
+```
+
+Internally maps to `GiveKey(source, plate)`.
+
+---
+
+## qbx_vehiclekeys
+
+The following callback and exports are supported:
+
+```lua
+-- Callback
+lib.callback('qbx_vehiclekeys:server:giveKeys', source, netId)
+
+-- Server exports
+exports.qbx_vehiclekeys:GiveKeys(source, vehicle)
+exports.qbx_vehiclekeys:RemoveKeys(source, vehicle)
+exports.qbx_vehiclekeys:SetLockState(netId, state)
+
+-- Client export
+exports.qbx_vehiclekeys:HasKeys(vehicle) -- returns boolean
+```
+
+---
+
+<Callout type="info">
+  Compatibility shims are handled in `cl-compatibility.lua` and `sv-compatibility.lua`.
+  If you need to add support for another resource, those are the files to extend.
+</Callout>
+
+<Callout type="warn">
+  Compatibility is provided on a best-effort basis. If the target resource has updated its
+  API since this was written, open a ticket in the
+  [Discord](https://discord.gg/bErPEKvRXg) and it will be patched.
+</Callout>

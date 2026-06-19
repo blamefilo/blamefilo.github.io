@@ -1,0 +1,26 @@
+---
+title: "Error: You lack the required entitlement"
+---
+```
+You lack the required entitlement to use filo_vehiclekeys
+```
+
+**What does this mean?**
+
+Some of our scripts use escrow system, which means scripts are linked to your FiveM account (the account you used on Tebex).
+
+In order to work, the script(s) must be run in a server which is using a server key created by the same FiveM account you used on Tebex. You can create a server key in [CFX Portal](https://portal.cfx.re/).
+
+Once you've created a server key, add it to your server's `server.cfg` like this:
+
+```
+sv_licenseKey "licensekeyhere"
+```
+
+**The script is on my friend's FiveM account**
+
+To transfer the script to another account, you can head to:
+
+[CFX Portal](https://portal.cfx.re/) -> Purchased assets tab -> Transfer to another account
+
+cfx.re only allow scripts to be transferred 1 time, so you won't be able to transfer the script again if you do this.
