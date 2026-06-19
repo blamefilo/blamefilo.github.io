@@ -1,10 +1,3 @@
 # Docs
 
 - [☁️ Welcome to filo studios.](/docs)
-- 🔑 filo_vehiclekeys
-  - [🔑 filo_vehiclekeys](/docs/filo_vehiclekeys): A fully refactored vehicle key management and locksmith system for FiveM.
-  - [Compatibility](/docs/filo_vehiclekeys/compatibility): Drop-in support for qb-vehiclekeys, and qbx_vehiclekeys.
-  - [Configuration](/docs/filo_vehiclekeys/configuration): Full breakdown of every config option available in filo_vehiclekeys.
-  - [Exports](/docs/filo_vehiclekeys/exports): Client and server exports provided by filo_vehiclekeys for use in other resources.
-  - [Flows](/docs/filo_vehiclekeys/flows): How mechanical key cutting, OBD fob programming, and the NPC locksmith store work.
-  - [Installation](/docs/filo_vehiclekeys/installation): Dependencies, setup steps, and migration from the legacy BIN format.
