@@ -1,0 +1,28 @@
+---
+title: HideText
+description: Hide the 2D bottom bar prompt.
+---
+
+Hides the bottom bar and stops the key-press polling thread.
+
+## Signature
+
+```lua
+exports.filo_textui:HideText()
+```
+
+## Example
+
+```lua
+local insideZone = false
+
+-- On zone enter
+exports.filo_textui:DrawText({ options = { { key = 'E', label = 'Interact' } } })
+insideZone = true
+
+-- On zone exit
+if insideZone then
+    exports.filo_textui:HideText()
+    insideZone = false
+end
+```
