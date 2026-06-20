@@ -62,6 +62,341 @@ cfx.re only allow scripts to be transferred 1 time, so you won't be able to tran
   * ...or check out the official [FiveM guide](https://docs.fivem.net/docs/server-manual/setting-up-a-server/)
 
 
+# DrawText3D (/docs/free_resources/filo_textui/draw-text-3d)
+
+
+
+
+
+Spawns a DUI-backed label rendered as a billboard in the game world. Each call from a resource manages a single label — calling `DrawText3D` again from the same resource will **update** the existing label rather than spawn a new one.
+
+## Signature [#signature]
+
+```lua
+exports.filo_textui:DrawText3D(data)
+```
+
+## Parameters [#parameters]
+
+| Field          | Type      | Required | Description                                                  |
+| -------------- | --------- | -------- | ------------------------------------------------------------ |
+| `entity`       | `number`  | —        | Entity handle to attach the label to.                        |
+| `coords`       | `vector3` | —        | World position for a static (non-entity) label.              |
+| `options`      | `table`   | ✓        | Array of label entries. See [Options](#options).             |
+| `distance`     | `number`  | —        | Visibility range in units. Default: `8.0`.                   |
+| `entityOffset` | `vector3` | —        | Override the automatic anchor offset relative to the entity. |
+
+<Callout type="warning">
+  Either `entity` or `coords` must be provided.
+</Callout>
+
+### Options [#options]
+
+Each entry in the `options` array:
+
+| Field   | Type     | Required | Description                                              |
+| ------- | -------- | -------- | -------------------------------------------------------- |
+| `key`   | `string` | —        | Key badge character. Supported: `E`, `F`, `G`, `H`, `X`. |
+| `label` | `string` | ✓        | Display text. Rendered uppercase.                        |
+
+Omitting `key` renders a plain text pill with no badge.
+
+## Auto anchor offsets [#auto-anchor-offsets]
+
+When `entityOffset` is not provided, the anchor is calculated from the entity's bounding box:
+
+| Entity type | Anchor offset                    |
+| ----------- | -------------------------------- |
+| Ped         | `vector3(maxX + 0.35, 0.0, 0.0)` |
+| Vehicle     | `vector3(maxX + 0.55, 0.0, 0.3)` |
+
+## Examples [#examples]
+
+### Attached to an entity [#attached-to-an-entity]
+
+```lua
+exports.filo_textui:DrawText3D({
+    entity  = entityId,
+    options = {
+        { key = 'E', label = 'Interact' },
+        { key = 'G', label = 'Options' },
+    },
+})
+```
+
+### Multiple labels, one without a key [#multiple-labels-one-without-a-key]
+
+```lua
+exports.filo_textui:DrawText3D({
+    entity  = entityId,
+    options = {
+        { key = 'E', label = 'Enter Vehicle' },
+        { label = 'Locked' },
+    },
+})
+```
+
+### Fixed world coordinates [#fixed-world-coordinates]
+
+```lua
+exports.filo_textui:DrawText3D({
+    coords   = vector3(100.0, 200.0, 30.0),
+    distance = 5.0,
+    options  = {
+        { key = 'E', label = 'Open' },
+    },
+})
+```
+
+### Custom anchor offset [#custom-anchor-offset]
+
+```lua
+exports.filo_textui:DrawText3D({
+    entity       = entityId,
+    entityOffset = vector3(0.0, 0.0, 1.5),
+    options      = {
+        { key = 'F', label = 'Fuel' },
+    },
+})
+```
+
+### Updating an existing label [#updating-an-existing-label]
+
+Calling `DrawText3D` from the same resource again will patch the label in-place:
+
+```lua
+-- Initial show
+exports.filo_textui:DrawText3D({
+    entity  = entityId,
+    options = { { key = 'E', label = 'Lock' } },
+})
+
+-- Later — updates without spawning a new DUI
+exports.filo_textui:DrawText3D({
+    entity  = entityId,
+    options = { { key = 'E', label = 'Unlock' } },
+})
+```
+
+
+# DrawText (/docs/free_resources/filo_textui/draw-text)
+
+
+
+
+
+Shows a screen-space prompt bar anchored to the bottom center of the screen. Accepts a table of options, a plain string, or a shorthand entity form. Calling `DrawText` again with identical options is a no-op.
+
+## Signature [#signature]
+
+```lua
+exports.filo_textui:DrawText(options)
+exports.filo_textui:DrawText(string)
+exports.filo_textui:DrawText(string, { entity = entityId })
+```
+
+## Parameters [#parameters]
+
+### Table form [#table-form]
+
+```lua
+exports.filo_textui:DrawText({
+    options = {
+        { key = 'E', label = 'Engine' },
+        { key = 'G', label = 'Gear' },
+    }
+})
+```
+
+| Field     | Type    | Required | Description             |
+| --------- | ------- | -------- | ----------------------- |
+| `options` | `table` | ✓        | Array of label entries. |
+
+### Options [#options]
+
+| Field   | Type     | Required | Description                                              |
+| ------- | -------- | -------- | -------------------------------------------------------- |
+| `key`   | `string` | —        | Key badge character. Supported: `E`, `F`, `G`, `H`, `X`. |
+| `label` | `string` | ✓        | Display text. Rendered uppercase.                        |
+
+### String shorthand [#string-shorthand]
+
+The key is parsed from square brackets in the string. Everything outside the brackets becomes the label.
+
+```lua
+exports.filo_textui:DrawText('[E] Interact')
+```
+
+### Entity shorthand [#entity-shorthand]
+
+Passing a second argument with an `entity` field delegates to [`DrawText3D`](/filo_textui/draw-text-3d) instead of showing the bottom bar.
+
+```lua
+exports.filo_textui:DrawText('[E] Interact', { entity = entityId })
+```
+
+<Callout type="info">
+  The entity shorthand is a convenience wrapper. It creates a single-row 3D label on the given entity — identical to calling `DrawText3D` directly.
+</Callout>
+
+## Examples [#examples]
+
+### Multiple prompts [#multiple-prompts]
+
+```lua
+exports.filo_textui:DrawText({
+    options = {
+        { key = 'E', label = 'Enter' },
+        { key = 'F', label = 'Flip' },
+        { label = 'Stolen' },
+    }
+})
+```
+
+### String shorthand [#string-shorthand-1]
+
+```lua
+exports.filo_textui:DrawText('[E] Open Door')
+```
+
+### Updating the bar [#updating-the-bar]
+
+Call `DrawText` again with different options to swap the prompts. If the options are identical to what's already showing, the call is ignored.
+
+```lua
+exports.filo_textui:DrawText({ options = { { key = 'E', label = 'Lock' } } })
+
+-- swap later
+exports.filo_textui:DrawText({ options = { { key = 'E', label = 'Unlock' } } })
+```
+
+
+# HideText3D (/docs/free_resources/filo_textui/hide-text-3d)
+
+
+
+Removes the DUI and cleans up the render thread for a 3D label. Safe to call even if the label is not currently visible.
+
+## Signature [#signature]
+
+```lua
+exports.filo_textui:HideText3D()
+```
+
+No arguments are required. The label owned by the calling resource is destroyed.
+
+## Example [#example]
+
+```lua
+exports.filo_textui:DrawText3D({
+    entity  = entityId,
+    options = { { key = 'E', label = 'Interact' } },
+})
+
+-- Later, when the interaction zone is left
+exports.filo_textui:HideText3D()
+```
+
+
+# HideText (/docs/free_resources/filo_textui/hide-text)
+
+
+
+Hides the bottom bar and stops the key-press polling thread.
+
+## Signature [#signature]
+
+```lua
+exports.filo_textui:HideText()
+```
+
+## Example [#example]
+
+```lua
+local insideZone = false
+
+-- On zone enter
+exports.filo_textui:DrawText({ options = { { key = 'E', label = 'Interact' } } })
+insideZone = true
+
+-- On zone exit
+if insideZone then
+    exports.filo_textui:HideText()
+    insideZone = false
+end
+```
+
+
+# filo_textui (/docs/free_resources/filo_textui)
+
+
+
+
+
+A lightweight text UI library for FiveM. Render interactive key prompts attached to entities or world coordinates, or display a contextual bottom bar — both with live key-press feedback.
+
+## Display modes [#display-modes]
+
+**3D world labels** are rendered directly in the game world as billboarded DUI textures. They scale with distance, auto-orient to the entity's forward vector, and clean up automatically when the tracked entity is removed.
+
+**2D bottom bar** is a screen-space prompt bar anchored to the bottom center of the screen. It slides in on show and supports the same key badge system.
+
+Both modes support optional key badges (`E` `F` `G` `H` `X`) that visually highlight when the player holds the corresponding key, making them well suited for interaction prompts.
+
+## Dependencies [#dependencies]
+
+* [`ox_lib`](https://github.com/overextended/ox_lib)
+
+## Installation [#installation]
+
+1. Drop `filo_textui` into your resources folder.
+2. Add `ensure filo_textui` to your `server.cfg` **before** any resource that uses it.
+
+<Callout type="info">
+  `filo_textui` must start before any resource that calls its exports.
+</Callout>
+
+## Configuration [#configuration]
+
+```lua title="config.lua"
+Config.FollowCamera = false
+```
+
+| Option         | Type      | Default | Description                                                                                 |
+| -------------- | --------- | ------- | ------------------------------------------------------------------------------------------- |
+| `FollowCamera` | `boolean` | `false` | When `true`, labels on entities rotate their anchor to always face the camera horizontally. |
+
+
+# IsTextVisible (/docs/free_resources/filo_textui/is-text-visible)
+
+
+
+Returns `true` if a 3D label spawned by the calling resource is currently active.
+
+## Signature [#signature]
+
+```lua
+local visible = exports.filo_textui:IsTextVisible()
+```
+
+## Returns [#returns]
+
+| Type      | Description                                     |
+| --------- | ----------------------------------------------- |
+| `boolean` | `true` if a label is active, `false` otherwise. |
+
+## Example [#example]
+
+```lua
+if not exports.filo_textui:IsTextVisible() then
+    exports.filo_textui:DrawText3D({
+        entity  = entityId,
+        options = { { key = 'E', label = 'Interact' } },
+    })
+end
+```
+
+
 # Compatibility (/docs/paid_resources/filo_vehiclekeys/compatibility)
 
 

@@ -4,6 +4,18 @@
 - Common escrow errors: Common escrow errors and how to resolve them
   - [Error: You lack the required entitlement](/docs/common_escrow/lack)
   - [Error: syntax error near <\1>](/docs/common_escrow/parsing)
+- Free Resources: My collection of free resources
+  - filo_textui
+    - [filo_textui](/docs/free_resources/filo_textui): Lightweight world-space and screen-space text UI for FiveM.
+
+    - **3D Labels**
+    - [DrawText3D](/docs/free_resources/filo_textui/draw-text-3d): Render a label stack in world space, attached to an entity or fixed coordinates.
+    - [HideText3D](/docs/free_resources/filo_textui/hide-text-3d): Destroy an active 3D world label.
+    - [IsTextVisible](/docs/free_resources/filo_textui/is-text-visible): Check whether a 3D label is currently active.
+
+    - **2D Text UI**
+    - [DrawText](/docs/free_resources/filo_textui/draw-text): Show the 2D bottom bar prompt, or attach a single label to an entity.
+    - [HideText](/docs/free_resources/filo_textui/hide-text): Hide the 2D bottom bar prompt.
 - Paid Resources: My collection of paid resources
   - 🔑 filo_vehiclekeys
     - [🔑 filo_vehiclekeys](/docs/paid_resources/filo_vehiclekeys): A fully refactored vehicle key management and locksmith system for FiveM.
