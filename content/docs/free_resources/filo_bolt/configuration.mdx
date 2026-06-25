@@ -1,0 +1,44 @@
+---
+title: Configuration
+description: Config options available in config.lua.
+---
+
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+
+## config.lua
+
+All static options live in `config.lua` at the root of the resource. Changes take effect on the next resource restart.
+
+```lua title="config.lua"
+Config = {}
+
+-- RGBA colour applied to the draw-outline on a hovered bolt.
+-- Values: 0–255 per channel.
+Config.OutlineColor = { r = 255, g = 255, b = 255, a = 255 }
+
+-- When true, the player must wait for the current bolt to finish
+-- rotating before they can click another one.
+Config.OneAtATime = false
+```
+
+## Options
+
+<TypeTable
+  type={{
+    OutlineColor: {
+      description: "RGBA table controlling the colour of the bolt hover outline.",
+      type: "{ r: number, g: number, b: number, a: number }",
+      default: "{ r = 255, g = 255, b = 255, a = 255 }",
+    },
+    OneAtATime: {
+      description: "Restricts the player to animating one bolt at a time. Useful for slower, more deliberate gameplay.",
+      type: "boolean",
+      default: "false",
+    },
+  }}
+/>
+
+## Notes
+
+- `OutlineColor` uses the same RGBA range (0–255) as `SetEntityDrawOutlineColor`.
+- `OneAtATime` only blocks the *start* of a new rotation — it does not cancel an animation already in progress.
