@@ -5,6 +5,12 @@
   - [Error: You lack the required entitlement](/docs/common_escrow/lack)
   - [Error: syntax error near <\1>](/docs/common_escrow/parsing)
 - Free Resources: My collection of free resources
+  - filo_bolt
+    - [filo_bolt](/docs/free_resources/filo_bolt): A 3D lug nut minigame for FiveM vehicle wheel interactions.
+    - [Installation](/docs/free_resources/filo_bolt/installation): How to add filo_bolt to your FiveM server.
+    - [Configuration](/docs/free_resources/filo_bolt/configuration): Config options available in config.lua.
+    - [Export](/docs/free_resources/filo_bolt/export): Full reference for the Start export.
+    - [Examples](/docs/free_resources/filo_bolt/examples): Common usage patterns for filo_bolt.
   - filo_textui
     - [filo_textui](/docs/free_resources/filo_textui): Lightweight world-space and screen-space text UI for FiveM.
 
