@@ -1360,3 +1360,63 @@ CREATE TABLE IF NOT EXISTS `filo_vehiclekeys` (
 
 Inactive vehicle records are pruned automatically based on the `VehicleDataRetentionMonths`
 config value. Only vehicles owned by a player are ever written to the table.
+
+## Items [#items]
+
+If you are using `ox_inventory`, add the following to your `items.lua`:
+
+````lua
+["vehiclekey"] = {
+    label = "Vehicle Key",
+    weight = 10,
+    width = 1,
+    height = 1,
+    stack = false,
+    close = true,
+},
+["locksmith_tablet"] = {
+    label = "Locksmith Tablet",
+    weight = 150,
+    width = 1,
+    height = 1,
+    close = true,
+},
+["key_cutting_tool"] = {
+    label = "Key Cutting Tool",
+    weight = 100,
+    width = 1,
+    height = 1,
+    close = true,
+},
+["blank_key"] = {
+    label = "Blank Key",
+    weight = 50,
+    width = 1,
+    height = 1,
+    close = true,
+},
+["electrical_tools"] = {
+    label = "Electrical Tools",
+    weight = 10,
+    width = 1,
+    height = 1,
+    stack = false,
+    close = true,
+},
+\```
+
+Then update your `Config.Locksmith.Items` to match the item names you defined:
+
+\```lua
+Config.Locksmith.Items = {
+    BlankKey       = 'blank_key',
+    KeyCuttingTool = 'key_cutting_tool',
+    OBD            = 'locksmith_tablet',
+}
+\```
+
+<Callout type="info">
+  `vehiclekey` and `electrical_tools` have `stack = false` — each key is a unique item
+  with its own metadata (plate, key ID, model info) so stacking must be disabled.
+</Callout>
+````
