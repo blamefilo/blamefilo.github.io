@@ -26,6 +26,10 @@
     Add the following to your `server.cfg`, **after** your framework and oxmysql:
 
     ```
+    ensure ox_lib
+    ensure ox_target
+    ensure ox_inventory
+    ensure community_bridge
     ensure filo_vehiclekeys
     ```
   </Step>
@@ -60,7 +64,7 @@ config value. Only vehicles owned by a player are ever written to the table.
 
 If you are using `ox_inventory`, add the following to your `items.lua`:
 
-````lua
+```lua
 ["vehiclekey"] = {
     label = "Vehicle Key",
     weight = 10,
@@ -98,20 +102,19 @@ If you are using `ox_inventory`, add the following to your `items.lua`:
     stack = false,
     close = true,
 },
-\```
+```
 
 Then update your `Config.Locksmith.Items` to match the item names you defined:
 
-\```lua
+```lua
 Config.Locksmith.Items = {
     BlankKey       = 'blank_key',
     KeyCuttingTool = 'key_cutting_tool',
     OBD            = 'locksmith_tablet',
 }
-\```
+```
 
 <Callout type="info">
   `vehiclekey` and `electrical_tools` have `stack = false` — each key is a unique item
   with its own metadata (plate, key ID, model info) so stacking must be disabled.
 </Callout>
-````
