@@ -1,4 +1,4 @@
-# Slash Tire (/docs/free_resources/filo_slashtire)
+# filo_slashtire (/docs/free_resources/filo_slashtire)
 
 
 

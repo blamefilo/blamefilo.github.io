@@ -575,7 +575,7 @@ Available interactions include:
 * Removing one jack correctly preserves the remaining side.
 
 
-# Slash Tire (/docs/free_resources/filo_slashtire)
+# filo_slashtire (/docs/free_resources/filo_slashtire)
 
 
 
@@ -659,6 +659,237 @@ For support and updates:
 
 ```
 ```
+
+
+# Configuration (/docs/free_resources/filo_stealwheels/configuration)
+
+
+
+Configuration is located in:
+
+```
+shared/sh-config.lua
+```
+
+## Wheel Item [#wheel-item]
+
+```lua
+Config.WheelItem = "vehicle_wheel"
+```
+
+Inventory item received after removing a wheel.
+
+***
+
+## Filo Jack Integration [#filo-jack-integration]
+
+```lua
+Config.UseFiloJack = true
+```
+
+When enabled, players must lift vehicles using **Filo Jack** before wheels can be removed.
+
+Disable if you don't use Filo Jack.
+
+```lua
+Config.UseFiloJack = false
+```
+
+***
+
+## Filo Bolt Integration [#filo-bolt-integration]
+
+```lua
+Config.UseFiloBolt = true
+```
+
+When enabled, players must remove bolts using **Filo Bolt** before wheels can be removed.
+
+Disable if you don't use Filo Bolt.
+
+```lua
+Config.UseFiloBolt = false
+```
+
+***
+
+## Required Tool [#required-tool]
+
+```lua
+Config.RequiredItem = "tire_iron"
+```
+
+Tool required for wheel removal.
+
+Set to `nil` to disable.
+
+```lua
+Config.RequiredItem = nil
+```
+
+***
+
+## Item Durability [#item-durability]
+
+```lua
+Config.DecreaseDurability = {
+    enabled = true,
+    amount = 10
+}
+```
+
+Decrease the durability of the tire iron after each use.
+
+* `enabled` enables durability loss.
+* `amount` specifies how much durability is removed.
+
+
+# FAQ (/docs/free_resources/filo_stealwheels/faq)
+
+
+
+## I can't remove wheels. [#i-cant-remove-wheels]
+
+Make sure:
+
+* You have a tire iron.
+* The vehicle is accessible.
+* If Filo Jack integration is enabled, the vehicle is lifted.
+
+***
+
+## Can I use this without Filo Jack? [#can-i-use-this-without-filo-jack]
+
+Yes.
+
+Set:
+
+```lua
+Config.UseFiloJack = false
+```
+
+***
+
+## Can I disable the required item? [#can-i-disable-the-required-item]
+
+Yes.
+
+```lua
+Config.RequiredItem = nil
+```
+
+***
+
+## Can I disable durability loss? [#can-i-disable-durability-loss]
+
+Yes.
+
+```lua
+Config.DecreaseDurability.enabled = false
+```
+
+
+# filo_stealwheels (/docs/free_resources/filo_stealwheels)
+
+
+
+Filo Steal Wheels allows players to remove wheels from vehicles using a tire iron. The script features realistic wheel removal, optional integration with &#x2A;*[filo\_jack](https://filo-studios.tebex.io/package/filo-jack)**, and ox\_inventory support.
+
+## Features [#features]
+
+* Remove individual vehicle wheels
+* Install removed wheels back onto vehicles
+* Compatible with ox\_inventory
+* Optional [filo\_jack](https://filo-studios.tebex.io/package/filo-jack) integration
+* Configurable required items
+* Configurable durability loss
+* Lightweight and optimized
+
+## Requirements [#requirements]
+
+* [ox\_lib](https://github.com/overextended/ox_lib)
+* [ox\_inventory](https://github.com/overextended/ox_inventory)
+* [community\_bridge](https://github.com/TheOrderFivem/community_bridge)
+
+> **Optional**
+>
+> * [filo\_jack](https://filo-studios.tebex.io/package/filo-jack)
+> * [filo\_bolt](https://filo-studios.tebex.io/package/filo-bolt)
+
+
+# Installation (/docs/free_resources/filo_stealwheels/installation)
+
+
+
+## 1. Install the resource [#1-install-the-resource]
+
+Copy the resource into your server's resources folder.
+
+```
+resources/
+    filo_stealwheels/
+```
+
+## 2. Add to server.cfg [#2-add-to-servercfg]
+
+```
+ensure filo_stealwheels
+```
+
+## 3. Install dependencies [#3-install-dependencies]
+
+Required:
+
+* [ox\_lib](https://github.com/overextended/ox_lib)
+* [ox\_inventory](https://github.com/overextended/ox_inventory)
+* [community\_bridge](https://github.com/TheOrderFivem/community_bridge)
+
+Optional:
+
+* [filo\_jack](https://filo-studios.tebex.io/package/filo-jack)
+* [filo\_bolt](https://filo-studios.tebex.io/package/filo-bolt)
+
+## 4. Import inventory items [#4-import-inventory-items]
+
+The package includes an example item configuration.
+
+```
+INSTALL/ox_inventory.txt
+```
+
+Also import the provided item images.
+
+```
+INSTALL/item images/
+```
+
+Images included:
+
+* tire\_iron.png
+* vehicle\_wheel.png
+
+## 5. Restart your server [#5-restart-your-server]
+
+Restart the server after installation.
+
+
+# Usage (/docs/free_resources/filo_stealwheels/usage)
+
+
+
+## Removing Wheels [#removing-wheels]
+
+1. Approach a vehicle.
+2. (Optional) Lift the vehicle using **Filo Jack**.
+3. Use a tire iron.
+4. Select the wheel to remove.
+5. The removed wheel is added to the player's inventory.
+
+## Notes [#notes]
+
+* Wheels are handled individually.
+* Filo Jack integration is optional.
+* Tire iron durability can decrease after every use.
 
 
 # DrawText3D (/docs/free_resources/filo_textui/draw-text-3d)
@@ -994,237 +1225,6 @@ if not exports.filo_textui:IsTextVisible() then
     })
 end
 ```
-
-
-# Configuration (/docs/free_resources/filo_stealwheels/configuration)
-
-
-
-Configuration is located in:
-
-```
-shared/sh-config.lua
-```
-
-## Wheel Item [#wheel-item]
-
-```lua
-Config.WheelItem = "vehicle_wheel"
-```
-
-Inventory item received after removing a wheel.
-
-***
-
-## Filo Jack Integration [#filo-jack-integration]
-
-```lua
-Config.UseFiloJack = true
-```
-
-When enabled, players must lift vehicles using **Filo Jack** before wheels can be removed.
-
-Disable if you don't use Filo Jack.
-
-```lua
-Config.UseFiloJack = false
-```
-
-***
-
-## Filo Bolt Integration [#filo-bolt-integration]
-
-```lua
-Config.UseFiloBolt = true
-```
-
-When enabled, players must remove bolts using **Filo Bolt** before wheels can be removed.
-
-Disable if you don't use Filo Bolt.
-
-```lua
-Config.UseFiloBolt = false
-```
-
-***
-
-## Required Tool [#required-tool]
-
-```lua
-Config.RequiredItem = "tire_iron"
-```
-
-Tool required for wheel removal.
-
-Set to `nil` to disable.
-
-```lua
-Config.RequiredItem = nil
-```
-
-***
-
-## Item Durability [#item-durability]
-
-```lua
-Config.DecreaseDurability = {
-    enabled = true,
-    amount = 10
-}
-```
-
-Decrease the durability of the tire iron after each use.
-
-* `enabled` enables durability loss.
-* `amount` specifies how much durability is removed.
-
-
-# FAQ (/docs/free_resources/filo_stealwheels/faq)
-
-
-
-## I can't remove wheels. [#i-cant-remove-wheels]
-
-Make sure:
-
-* You have a tire iron.
-* The vehicle is accessible.
-* If Filo Jack integration is enabled, the vehicle is lifted.
-
-***
-
-## Can I use this without Filo Jack? [#can-i-use-this-without-filo-jack]
-
-Yes.
-
-Set:
-
-```lua
-Config.UseFiloJack = false
-```
-
-***
-
-## Can I disable the required item? [#can-i-disable-the-required-item]
-
-Yes.
-
-```lua
-Config.RequiredItem = nil
-```
-
-***
-
-## Can I disable durability loss? [#can-i-disable-durability-loss]
-
-Yes.
-
-```lua
-Config.DecreaseDurability.enabled = false
-```
-
-
-# filo_stealwheels (/docs/free_resources/filo_stealwheels)
-
-
-
-Filo Steal Wheels allows players to remove wheels from vehicles using a tire iron. The script features realistic wheel removal, optional integration with &#x2A;*[filo\_jack](https://filo-studios.tebex.io/package/filo-jack)**, and ox\_inventory support.
-
-## Features [#features]
-
-* Remove individual vehicle wheels
-* Install removed wheels back onto vehicles
-* Compatible with ox\_inventory
-* Optional [filo\_jack](https://filo-studios.tebex.io/package/filo-jack) integration
-* Configurable required items
-* Configurable durability loss
-* Lightweight and optimized
-
-## Requirements [#requirements]
-
-* [ox\_lib](https://github.com/overextended/ox_lib)
-* [ox\_inventory](https://github.com/overextended/ox_inventory)
-* [community\_bridge](https://github.com/TheOrderFivem/community_bridge)
-
-> **Optional**
->
-> * [filo\_jack](https://filo-studios.tebex.io/package/filo-jack)
-> * [filo\_bolt](https://filo-studios.tebex.io/package/filo-bolt)
-
-
-# Installation (/docs/free_resources/filo_stealwheels/installation)
-
-
-
-## 1. Install the resource [#1-install-the-resource]
-
-Copy the resource into your server's resources folder.
-
-```
-resources/
-    filo_stealwheels/
-```
-
-## 2. Add to server.cfg [#2-add-to-servercfg]
-
-```
-ensure filo_stealwheels
-```
-
-## 3. Install dependencies [#3-install-dependencies]
-
-Required:
-
-* [ox\_lib](https://github.com/overextended/ox_lib)
-* [ox\_inventory](https://github.com/overextended/ox_inventory)
-* [community\_bridge](https://github.com/TheOrderFivem/community_bridge)
-
-Optional:
-
-* [filo\_jack](https://filo-studios.tebex.io/package/filo-jack)
-* [filo\_bolt](https://filo-studios.tebex.io/package/filo-bolt)
-
-## 4. Import inventory items [#4-import-inventory-items]
-
-The package includes an example item configuration.
-
-```
-INSTALL/ox_inventory.txt
-```
-
-Also import the provided item images.
-
-```
-INSTALL/item images/
-```
-
-Images included:
-
-* tire\_iron.png
-* vehicle\_wheel.png
-
-## 5. Restart your server [#5-restart-your-server]
-
-Restart the server after installation.
-
-
-# Usage (/docs/free_resources/filo_stealwheels/usage)
-
-
-
-## Removing Wheels [#removing-wheels]
-
-1. Approach a vehicle.
-2. (Optional) Lift the vehicle using **Filo Jack**.
-3. Use a tire iron.
-4. Select the wheel to remove.
-5. The removed wheel is added to the player's inventory.
-
-## Notes [#notes]
-
-* Wheels are handled individually.
-* Filo Jack integration is optional.
-* Tire iron durability can decrease after every use.
 
 
 # Compatibility (/docs/paid_resources/filo_vehiclekeys/compatibility)

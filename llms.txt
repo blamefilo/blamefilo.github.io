@@ -17,8 +17,8 @@
     - [Configuration](/docs/free_resources/filo_jack/configuration)
     - [Exports](/docs/free_resources/filo_jack/exports)
     - [Usage](/docs/free_resources/filo_jack/usage)
-  - Slash Tire
-    - [Slash Tire](/docs/free_resources/filo_slashtire)
+  - filo_slashtire
+    - [filo_slashtire](/docs/free_resources/filo_slashtire)
   - filo_stealwheels
     - [filo_stealwheels](/docs/free_resources/filo_stealwheels): Realistic wheel removal system for FiveM.
     - [Installation](/docs/free_resources/filo_stealwheels/installation)
