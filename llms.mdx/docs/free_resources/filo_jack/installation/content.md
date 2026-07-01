@@ -2,8 +2,6 @@
 
 
 
-# Installation [#installation]
-
 ## 1. Install the resource [#1-install-the-resource]
 
 Place the resource inside your server's resources folder.

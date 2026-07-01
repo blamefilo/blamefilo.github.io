@@ -2,8 +2,6 @@
 
 
 
-# Configuration [#configuration]
-
 Open:
 
 ```

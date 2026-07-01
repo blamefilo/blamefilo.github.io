@@ -2,8 +2,6 @@
 
 
 
-# Usage [#usage]
-
 Approach either side of a vehicle.
 
 Available interactions include:

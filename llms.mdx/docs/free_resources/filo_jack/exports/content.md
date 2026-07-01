@@ -2,8 +2,6 @@
 
 
 
-# Exports [#exports]
-
 ## IsLifted [#islifted]
 
 Checks whether a vehicle has been fully lifted.
