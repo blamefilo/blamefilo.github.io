@@ -16,7 +16,6 @@
 
 * [ox\_lib](https://github.com/overextended/ox_lib)
 * [ox\_target](https://github.com/overextended/ox_target)
-*
 
 ## Installation [#installation]
 
