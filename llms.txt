@@ -11,6 +11,12 @@
     - [Configuration](/docs/free_resources/filo_bolt/configuration): Config options available in config.lua.
     - [Export](/docs/free_resources/filo_bolt/export): Full reference for the Start export.
     - [Examples](/docs/free_resources/filo_bolt/examples): Common usage patterns for filo_bolt.
+  - filo_jack
+    - [filo_jack](/docs/free_resources/filo_jack)
+    - [Installation](/docs/free_resources/filo_jack/installation)
+    - [Configuration](/docs/free_resources/filo_jack/configuration)
+    - [Exports](/docs/free_resources/filo_jack/exports)
+    - [Usage](/docs/free_resources/filo_jack/usage)
   - filo_textui
     - [filo_textui](/docs/free_resources/filo_textui): Lightweight world-space and screen-space text UI for FiveM.
 
@@ -25,8 +31,8 @@
 - Paid Resources: My collection of paid resources
   - 🔑 filo_vehiclekeys
     - [🔑 filo_vehiclekeys](/docs/paid_resources/filo_vehiclekeys): A fully refactored vehicle key management and locksmith system for FiveM.
+    - [Installation](/docs/paid_resources/filo_vehiclekeys/installation): Dependencies, setup steps, and migration from the legacy BIN format.
     - [Compatibility](/docs/paid_resources/filo_vehiclekeys/compatibility): Drop-in support for qb-vehiclekeys, and qbx_vehiclekeys.
     - [Configuration](/docs/paid_resources/filo_vehiclekeys/configuration): Full breakdown of every config option available in filo_vehiclekeys.
     - [Exports](/docs/paid_resources/filo_vehiclekeys/exports): Client and server exports provided by filo_vehiclekeys for use in other resources.
     - [Flows](/docs/paid_resources/filo_vehiclekeys/flows): How mechanical key cutting, OBD fob programming, and the NPC locksmith store work.
-    - [Installation](/docs/paid_resources/filo_vehiclekeys/installation): Dependencies, setup steps, and migration from the legacy BIN format.
