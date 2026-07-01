@@ -1,0 +1,54 @@
+---
+title: Installation
+---
+
+## 1. Install the resource
+
+Copy the resource into your server's resources folder.
+
+```
+resources/
+    filo_stealwheels/
+```
+
+## 2. Add to server.cfg
+
+```cfg
+ensure filo_stealwheels
+```
+
+## 3. Install dependencies
+
+Required:
+
+- [ox_lib](https://github.com/overextended/ox_lib)
+- [ox_inventory](https://github.com/overextended/ox_inventory)
+- [community_bridge](https://github.com/TheOrderFivem/community_bridge)
+
+Optional:
+
+- [filo_jack](https://filo-studios.tebex.io/package/filo-jack)
+- [filo_bolt](https://filo-studios.tebex.io/package/filo-bolt)
+
+## 4. Import inventory items
+
+The package includes an example item configuration.
+
+```
+INSTALL/ox_inventory.txt
+```
+
+Also import the provided item images.
+
+```
+INSTALL/item images/
+```
+
+Images included:
+
+- tire_iron.png
+- vehicle_wheel.png
+
+## 5. Restart your server
+
+Restart the server after installation.
