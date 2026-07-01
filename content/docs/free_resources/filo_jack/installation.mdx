@@ -1,0 +1,55 @@
+---
+title: Installation
+---
+
+# Installation
+
+## 1. Install the resource
+
+Place the resource inside your server's resources folder.
+
+```
+resources/
+    filo_jack/
+```
+
+## 2. Ensure the resource
+
+Add the following to your `server.cfg`.
+
+```
+ensure ox_lib
+
+# ensure frameworkName [qbx_core/qb-core]
+
+ensure community_bridge
+ensure filo_jack
+```
+
+## 3. Install dependencies
+
+Required:
+
+- [ox_lib](https://github.com/overextended/ox_lib)
+- [community_bridge](https://github.com/TheOrderFivem/community_bridge)
+
+## 4. Inventory Item
+
+Create the following inventory item.
+
+```
+['vehicle_jack'] = {
+    label = 'Vehicle Jack',
+    weight = 500,
+},
+```
+
+An item image is included inside:
+
+```
+INSTALL/item images/
+```
+
+## 5. Restart the server
+
+Once installed, restart your server.

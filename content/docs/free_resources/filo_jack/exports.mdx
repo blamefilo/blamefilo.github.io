@@ -1,0 +1,34 @@
+---
+title: Exports
+---
+
+# Exports
+
+## IsLifted
+
+Checks whether a vehicle has been fully lifted.
+
+### Client
+
+```lua
+local lifted = exports.filo_jack:IsLifted(vehicle)
+```
+
+Specify a side.
+
+```lua
+local lifted = exports.filo_jack:IsLifted(vehicle, "left")
+```
+
+### Parameters
+
+| Name | Type | Description |
+|------|------|-------------|
+| entity | number | Vehicle entity |
+| side | string | `"left"` or `"right"` (optional) |
+
+### Returns
+
+```lua
+boolean
+```

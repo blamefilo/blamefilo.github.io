@@ -1,0 +1,51 @@
+---
+title: Configuration
+---
+
+# Configuration
+
+Open:
+
+```
+shared/sh-config.lua
+```
+
+## Debug
+
+```lua
+Config.Debug = false
+```
+
+Enable console debugging.
+
+---
+
+## Allowed Jobs
+
+```lua
+Config.JobsAllowed = {
+    "mechanic",
+}
+```
+
+Set to `nil` to allow everyone.
+
+Example:
+
+```lua
+Config.JobsAllowed = nil
+```
+
+---
+
+## Required Item
+
+```lua
+Config.RequiredItem = "vehicle_jack"
+```
+
+Set to `nil` to disable the inventory requirement.
+
+```lua
+Config.RequiredItem = nil
+```
