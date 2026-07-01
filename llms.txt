@@ -17,6 +17,12 @@
     - [Configuration](/docs/free_resources/filo_jack/configuration)
     - [Exports](/docs/free_resources/filo_jack/exports)
     - [Usage](/docs/free_resources/filo_jack/usage)
+  - filo_stealwheels
+    - [filo_stealwheels](/docs/free_resources/filo_stealwheels): Realistic wheel removal system for FiveM.
+    - [Installation](/docs/free_resources/filo_stealwheels/installation)
+    - [Configuration](/docs/free_resources/filo_stealwheels/configuration)
+    - [Usage](/docs/free_resources/filo_stealwheels/usage)
+    - [FAQ](/docs/free_resources/filo_stealwheels/faq)
   - filo_textui
     - [filo_textui](/docs/free_resources/filo_textui): Lightweight world-space and screen-space text UI for FiveM.
 
