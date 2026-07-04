@@ -6,15 +6,15 @@
 
 ## Dependencies [#dependencies]
 
-| Resource                                                           | Required | Notes                               |
-| ------------------------------------------------------------------ | -------- | ----------------------------------- |
-| [oxmysql](https://github.com/overextended/oxmysql)                 | Yes      |                                     |
-| [ox\_lib](https://github.com/overextended/ox_lib)                  | Yes      |                                     |
-| [filo\_textui](https://filo-studios.tebex.io/package/filo-textui)  | Yes      |                                     |
-| [community\_bridge](https://github.com/thelindat/community_bridge) | Yes      | Framework abstraction layer         |
-| [filo\_blips](https://github.com/blamefilo/filo_blips)             | No       | Falls back to native FiveM blips    |
-| ox\_target / qb-target                                             | No       | Falls back to textui if not present |
-| [xsound](https://github.com/Xogy/xsound)                           | No       | Ignition and hotwire sound effects  |
+| Resource                                                               | Required | Notes                               |
+| ---------------------------------------------------------------------- | -------- | ----------------------------------- |
+| [oxmysql](https://github.com/overextended/oxmysql)                     | Yes      |                                     |
+| [ox\_lib](https://github.com/overextended/ox_lib)                      | Yes      |                                     |
+| [filo\_textui](https://filo-studios.tebex.io/package/filo-textui)      | Yes      |                                     |
+| [community\_bridge](https://github.com/TheOrderFivem/community_bridge) | Yes      | Framework abstraction layer         |
+| [filo\_blips](https://github.com/blamefilo/filo_blips)                 | No       | Falls back to native FiveM blips    |
+| ox\_target / qb-target                                                 | No       | Falls back to textui if not present |
+| [xsound](https://github.com/Xogy/xsound)                               | No       | Ignition and hotwire sound effects  |
 
 ## Setup [#setup]
 
