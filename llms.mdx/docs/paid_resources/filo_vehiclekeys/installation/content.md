@@ -10,6 +10,7 @@
 | ------------------------------------------------------------------ | -------- | ----------------------------------- |
 | [oxmysql](https://github.com/overextended/oxmysql)                 | Yes      |                                     |
 | [ox\_lib](https://github.com/overextended/ox_lib)                  | Yes      |                                     |
+| [filo\_textui](https://filo-studios.tebex.io/package/filo-textui)  | Yes      |                                     |
 | [community\_bridge](https://github.com/thelindat/community_bridge) | Yes      | Framework abstraction layer         |
 | [filo\_blips](https://github.com/blamefilo/filo_blips)             | No       | Falls back to native FiveM blips    |
 | ox\_target / qb-target                                             | No       | Falls back to textui if not present |
@@ -23,13 +24,15 @@
   </Step>
 
   <Step>
-    Add the following to your `server.cfg`, **after** your framework and oxmysql:
+    Add the following to your `server.cfg`:
 
     ```
     ensure ox_lib
+    ensure qbx_core # or the framework you are using
     ensure ox_target
     ensure ox_inventory
     ensure community_bridge
+    ensure filo_textui
     ensure filo_vehiclekeys
     ```
   </Step>
