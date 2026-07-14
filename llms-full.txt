@@ -6,7 +6,7 @@ Welcome to the official documentation for filo studios! We are thrilled to have 
 
 ## Quick Links [#quick-links]
 
-[![Tebex](https://img.shields.io/badge/Tebex-blue?style=for-the-badge\&logo=tebex)](https://filo-studios.tebex.io)
+[![Tebex](https://img.shields.io/badge/Tebex-blue?style=for-the-badge\&logo=tebex)](https://filo.tebex.io)
 
 [![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge\&logo=discord\&logoColor=white)](https://discord.gg/aTAU7hBdaa)
 
@@ -344,7 +344,7 @@ Before installing, make sure the following resource is running on your server:
 <Steps>
   ### Download the resource [#download-the-resource]
 
-  Purchase and download `filo_bolt` from [filo-studios.tebex.io](https://filo-studios.tebex.io). Extract the archive — you should have a single folder named `filo_bolt`.
+  Purchase and download `filo_bolt` from [filo.tebex.io](https://filo.tebex.io). Extract the archive — you should have a single folder named `filo_bolt`.
 
   ### Add to your resources [#add-to-your-resources]
 
@@ -385,91 +385,6 @@ Before installing, make sure the following resource is running on your server:
 <Callout type="warn">
   Do not rename the resource folder. The export is registered under `filo_bolt` and callers reference it by that name.
 </Callout>
-
-
-# filo_slashtire (/docs/free_resources/filo_slashtire)
-
-
-
-`filo_slashtire` allows players to puncture vehicle tires using configurable melee weapons. The resource automatically detects the nearest tire, synchronizes the damage across all clients, and integrates with **ox\_target** for seamless interaction.
-
-## Features [#features]
-
-* Lightweight and optimized
-* Automatic closest tire detection
-* Configurable allowed weapons
-* Fully synchronized tire damage
-* Framework independent
-
-## Requirements [#requirements]
-
-* [ox\_lib](https://github.com/overextended/ox_lib)
-* [ox\_target](https://github.com/overextended/ox_target)
-
-## Installation [#installation]
-
-1. Place `filo_slashtire` in your `resources` folder.
-2. Ensure the required dependencies before the resource.
-
-```
-ensure ox_lib
-ensure ox_target
-ensure filo_slashtire
-```
-
-## Configuration [#configuration]
-
-### Allowed Weapons [#allowed-weapons]
-
-Configure which weapons can slash tires in:
-
-```text
-shared/sh-config.lua
-```
-
-Example:
-
-```lua
-Config.AllowedWeapons = {
-    `WEAPON_KNIFE`,
-    `WEAPON_SWITCHBLADE`,
-    `WEAPON_DAGGER`
-}
-```
-
-Any GTA V weapon hash can be added or removed from this table.
-
-## Usage [#usage]
-
-1. Equip one of the configured weapons.
-2. Walk up to a vehicle tire.
-3. Target the tire using **ox\_target**.
-4. Select **Slash Tire**.
-5. The tire will be punctured for everyone on the server.
-
-## Compatibility [#compatibility]
-
-| Resource   | Required |
-| ---------- | -------- |
-| ox\_lib    | ✅        |
-| ox\_target | ✅        |
-
-## Support [#support]
-
-If you encounter an issue, please include:
-
-* Server artifacts version
-* Resource version
-* Console errors
-* Steps to reproduce
-
-For support and updates:
-
-* **Discord**: [https://discord.gg/ReEE9HgA4c](https://discord.gg/ReEE9HgA4c)
-* **Store**: [https://filo-studios.tebex.io](https://filo-studios.tebex.io)
-
-```
-```
 
 
 # Configuration (/docs/free_resources/filo_jack/configuration)
@@ -660,6 +575,91 @@ Available interactions include:
 * Removing one jack correctly preserves the remaining side.
 
 
+# filo_slashtire (/docs/free_resources/filo_slashtire)
+
+
+
+`filo_slashtire` allows players to puncture vehicle tires using configurable melee weapons. The resource automatically detects the nearest tire, synchronizes the damage across all clients, and integrates with **ox\_target** for seamless interaction.
+
+## Features [#features]
+
+* Lightweight and optimized
+* Automatic closest tire detection
+* Configurable allowed weapons
+* Fully synchronized tire damage
+* Framework independent
+
+## Requirements [#requirements]
+
+* [ox\_lib](https://github.com/overextended/ox_lib)
+* [ox\_target](https://github.com/overextended/ox_target)
+
+## Installation [#installation]
+
+1. Place `filo_slashtire` in your `resources` folder.
+2. Ensure the required dependencies before the resource.
+
+```
+ensure ox_lib
+ensure ox_target
+ensure filo_slashtire
+```
+
+## Configuration [#configuration]
+
+### Allowed Weapons [#allowed-weapons]
+
+Configure which weapons can slash tires in:
+
+```text
+shared/sh-config.lua
+```
+
+Example:
+
+```lua
+Config.AllowedWeapons = {
+    `WEAPON_KNIFE`,
+    `WEAPON_SWITCHBLADE`,
+    `WEAPON_DAGGER`
+}
+```
+
+Any GTA V weapon hash can be added or removed from this table.
+
+## Usage [#usage]
+
+1. Equip one of the configured weapons.
+2. Walk up to a vehicle tire.
+3. Target the tire using **ox\_target**.
+4. Select **Slash Tire**.
+5. The tire will be punctured for everyone on the server.
+
+## Compatibility [#compatibility]
+
+| Resource   | Required |
+| ---------- | -------- |
+| ox\_lib    | ✅        |
+| ox\_target | ✅        |
+
+## Support [#support]
+
+If you encounter an issue, please include:
+
+* Server artifacts version
+* Resource version
+* Console errors
+* Steps to reproduce
+
+For support and updates:
+
+* **Discord**: [https://discord.gg/ReEE9HgA4c](https://discord.gg/ReEE9HgA4c)
+* **Store**: [https://filo.tebex.io](https://filo.tebex.io)
+
+```
+```
+
+
 # Configuration (/docs/free_resources/filo_stealwheels/configuration)
 
 
@@ -792,14 +792,14 @@ Config.DecreaseDurability.enabled = false
 
 
 
-Filo Steal Wheels allows players to remove wheels from vehicles using a tire iron. The script features realistic wheel removal, optional integration with &#x2A;*[filo\_jack](https://filo-studios.tebex.io/package/filo-jack)**, and ox\_inventory support.
+Filo Steal Wheels allows players to remove wheels from vehicles using a tire iron. The script features realistic wheel removal, optional integration with &#x2A;*[filo\_jack](https://filo.tebex.io/package/filo-jack)**, and ox\_inventory support.
 
 ## Features [#features]
 
 * Remove individual vehicle wheels
 * Install removed wheels back onto vehicles
 * Compatible with ox\_inventory
-* Optional [filo\_jack](https://filo-studios.tebex.io/package/filo-jack) integration
+* Optional [filo\_jack](https://filo.tebex.io/package/filo-jack) integration
 * Configurable required items
 * Configurable durability loss
 * Lightweight and optimized
@@ -812,8 +812,8 @@ Filo Steal Wheels allows players to remove wheels from vehicles using a tire iro
 
 > **Optional**
 >
-> * [filo\_jack](https://filo-studios.tebex.io/package/filo-jack)
-> * [filo\_bolt](https://filo-studios.tebex.io/package/filo-bolt)
+> * [filo\_jack](https://filo.tebex.io/package/filo-jack)
+> * [filo\_bolt](https://filo.tebex.io/package/filo-bolt)
 
 
 # Installation (/docs/free_resources/filo_stealwheels/installation)
@@ -845,8 +845,8 @@ Required:
 
 Optional:
 
-* [filo\_jack](https://filo-studios.tebex.io/package/filo-jack)
-* [filo\_bolt](https://filo-studios.tebex.io/package/filo-bolt)
+* [filo\_jack](https://filo.tebex.io/package/filo-jack)
+* [filo\_bolt](https://filo.tebex.io/package/filo-bolt)
 
 ## 4. Import inventory items [#4-import-inventory-items]
 
@@ -1767,7 +1767,7 @@ Cancelling the progress bar or failing the minigame aborts the flow with no item
 
 
 
-[![Buy on Tebex](https://img.shields.io/badge/Tebex-blue?style=for-the-badge\&logo=tebex)](https://filo-studios.tebex.io/package/filo-vehiclekeys)
+[![Buy on Tebex](https://img.shields.io/badge/Tebex-blue?style=for-the-badge\&logo=tebex)](https://filo.tebex.io/package/filo-vehiclekeys)
 
 Duplicate keys, program key fobs, and manage locksmith interactions for FiveM servers.
 Supports both mechanical key cutting and OBD-based fob programming for electric vehicles,
@@ -1819,7 +1819,7 @@ with an NPC fallback store when no locksmiths are on duty.
 | ---------------------------------------------------------------------- | -------- | ----------------------------------- |
 | [oxmysql](https://github.com/overextended/oxmysql)                     | Yes      |                                     |
 | [ox\_lib](https://github.com/overextended/ox_lib)                      | Yes      |                                     |
-| [filo\_textui](https://filo-studios.tebex.io/package/filo-textui)      | Yes      |                                     |
+| [filo\_textui](https://filo.tebex.io/package/filo-textui)              | Yes      |                                     |
 | [community\_bridge](https://github.com/TheOrderFivem/community_bridge) | Yes      | Framework abstraction layer         |
 | [filo\_blips](https://github.com/blamefilo/filo_blips)                 | No       | Falls back to native FiveM blips    |
 | ox\_target / qb-target                                                 | No       | Falls back to textui if not present |

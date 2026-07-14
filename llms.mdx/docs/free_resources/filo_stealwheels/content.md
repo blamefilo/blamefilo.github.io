@@ -2,14 +2,14 @@
 
 
 
-Filo Steal Wheels allows players to remove wheels from vehicles using a tire iron. The script features realistic wheel removal, optional integration with &#x2A;*[filo\_jack](https://filo-studios.tebex.io/package/filo-jack)**, and ox\_inventory support.
+Filo Steal Wheels allows players to remove wheels from vehicles using a tire iron. The script features realistic wheel removal, optional integration with &#x2A;*[filo\_jack](https://filo.tebex.io/package/filo-jack)**, and ox\_inventory support.
 
 ## Features [#features]
 
 * Remove individual vehicle wheels
 * Install removed wheels back onto vehicles
 * Compatible with ox\_inventory
-* Optional [filo\_jack](https://filo-studios.tebex.io/package/filo-jack) integration
+* Optional [filo\_jack](https://filo.tebex.io/package/filo-jack) integration
 * Configurable required items
 * Configurable durability loss
 * Lightweight and optimized
@@ -22,5 +22,5 @@ Filo Steal Wheels allows players to remove wheels from vehicles using a tire iro
 
 > **Optional**
 >
-> * [filo\_jack](https://filo-studios.tebex.io/package/filo-jack)
-> * [filo\_bolt](https://filo-studios.tebex.io/package/filo-bolt)
+> * [filo\_jack](https://filo.tebex.io/package/filo-jack)
+> * [filo\_bolt](https://filo.tebex.io/package/filo-bolt)

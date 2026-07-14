@@ -77,7 +77,7 @@ If you encounter an issue, please include:
 For support and updates:
 
 * **Discord**: [https://discord.gg/ReEE9HgA4c](https://discord.gg/ReEE9HgA4c)
-* **Store**: [https://filo-studios.tebex.io](https://filo-studios.tebex.io)
+* **Store**: [https://filo.tebex.io](https://filo.tebex.io)
 
 ```
 ```

@@ -27,8 +27,8 @@ Required:
 
 Optional:
 
-* [filo\_jack](https://filo-studios.tebex.io/package/filo-jack)
-* [filo\_bolt](https://filo-studios.tebex.io/package/filo-bolt)
+* [filo\_jack](https://filo.tebex.io/package/filo-jack)
+* [filo\_bolt](https://filo.tebex.io/package/filo-bolt)
 
 ## 4. Import inventory items [#4-import-inventory-items]
 

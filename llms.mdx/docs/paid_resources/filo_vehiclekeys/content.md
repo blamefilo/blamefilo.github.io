@@ -4,7 +4,7 @@
 
 
 
-[![Buy on Tebex](https://img.shields.io/badge/Tebex-blue?style=for-the-badge\&logo=tebex)](https://filo-studios.tebex.io/package/filo-vehiclekeys)
+[![Buy on Tebex](https://img.shields.io/badge/Tebex-blue?style=for-the-badge\&logo=tebex)](https://filo.tebex.io/package/filo-vehiclekeys)
 
 Duplicate keys, program key fobs, and manage locksmith interactions for FiveM servers.
 Supports both mechanical key cutting and OBD-based fob programming for electric vehicles,

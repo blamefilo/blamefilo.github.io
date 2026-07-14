@@ -6,7 +6,7 @@ Welcome to the official documentation for filo studios! We are thrilled to have 
 
 ## Quick Links [#quick-links]
 
-[![Tebex](https://img.shields.io/badge/Tebex-blue?style=for-the-badge\&logo=tebex)](https://filo-studios.tebex.io)
+[![Tebex](https://img.shields.io/badge/Tebex-blue?style=for-the-badge\&logo=tebex)](https://filo.tebex.io)
 
 [![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge\&logo=discord\&logoColor=white)](https://discord.gg/aTAU7hBdaa)
 
