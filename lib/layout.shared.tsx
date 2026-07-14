@@ -19,7 +19,7 @@ export function baseOptions(): BaseLayoutProps {
                     />
                 ),
                 text: "Store",
-                url: `https://filo-studios.tebex.io/`,
+                url: `https://filo.tebex.io/`,
             },
             {
                 icon: (
@@ -56,7 +56,7 @@ export function baseOptions(): BaseLayoutProps {
                     />
                 ),
                 text: "Tebex",
-                url: "https://filo-studios.tebex.io/",
+                url: "https://filo.tebex.io/",
             },
         ],
     };
