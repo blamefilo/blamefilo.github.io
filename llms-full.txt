@@ -1496,6 +1496,16 @@ exports.filo_vehiclekeys:SetKeysInIgnition(
 
 ***
 
+### `IsKeysInIgnition` [#iskeysinignition]
+
+Check whether keys are currently in the ignition for a vehicle.
+
+```lua
+local keysInIgnition = exports.filo_vehiclekeys:IsKeysInIgnition(entity --[[entity|netId]])
+```
+
+***
+
 ### `SetLockState` [#setlockstate]
 
 Directly set the lock state of a vehicle by net ID.
@@ -1578,6 +1588,16 @@ exports.filo_vehiclekeys:SetKeysInIgnition(
     keysInIgnition --[[boolean]],
     canRemove      --[[boolean]]
 )
+```
+
+***
+
+### `IsKeysInIgnition` [#iskeysinignition-1]
+
+Check whether keys are currently in the ignition for a vehicle.
+
+```lua
+local keysInIgnition = exports.filo_vehiclekeys:IsKeysInIgnition(entity --[[entity|netId]])
 ```
 
 Shorthand helpers:
@@ -1815,16 +1835,16 @@ with an NPC fallback store when no locksmiths are on duty.
 
 ## Dependencies [#dependencies]
 
-| Resource                                                               | Required | Notes                               |
-| ---------------------------------------------------------------------- | -------- | ----------------------------------- |
-| [oxmysql](https://github.com/overextended/oxmysql)                     | Yes      |                                     |
-| [ox\_lib](https://github.com/overextended/ox_lib)                      | Yes      |                                     |
-| [filo\_textui](https://filo.tebex.io/package/filo-textui)              | Yes      |                                     |
-| [eye\_minigames](https://github.com/invalid0190/eye_minigames)         | Yes      |                                     |
-| [community\_bridge](https://github.com/TheOrderFivem/community_bridge) | Yes      | Framework abstraction layer         |
-| [filo\_blips](https://github.com/blamefilo/filo_blips)                 | No       | Falls back to native FiveM blips    |
-| ox\_target / qb-target                                                 | No       | Falls back to textui if not present |
-| [xsound](https://github.com/Xogy/xsound)                               | No       | Ignition and hotwire sound effects  |
+| Resource                                                           | Required | Notes                               |
+| ------------------------------------------------------------------ | -------- | ----------------------------------- |
+| [oxmysql](https://github.com/overextended/oxmysql)                 | Yes      |                                     |
+| [ox\_lib](https://github.com/overextended/ox_lib)                  | Yes      |                                     |
+| [filo\_textui](https://filo.tebex.io/package/filo-textui)          | Yes      |                                     |
+| [eye\_minigames](https://github.com/invalid0190/eye_minigames)     | Yes      |                                     |
+| [community\_bridge](https://github.com/blamefilo/community_bridge) | Yes      | Framework abstraction layer         |
+| [filo\_blips](https://github.com/blamefilo/filo_blips)             | No       | Falls back to native FiveM blips    |
+| ox\_target / qb-target                                             | No       | Falls back to textui if not present |
+| [xsound](https://github.com/Xogy/xsound)                           | No       | Ignition and hotwire sound effects  |
 
 ## Setup [#setup]
 

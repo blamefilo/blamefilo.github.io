@@ -76,6 +76,16 @@ exports.filo_vehiclekeys:SetKeysInIgnition(
 
 ***
 
+### `IsKeysInIgnition` [#iskeysinignition]
+
+Check whether keys are currently in the ignition for a vehicle.
+
+```lua
+local keysInIgnition = exports.filo_vehiclekeys:IsKeysInIgnition(entity --[[entity|netId]])
+```
+
+***
+
 ### `SetLockState` [#setlockstate]
 
 Directly set the lock state of a vehicle by net ID.
@@ -158,6 +168,16 @@ exports.filo_vehiclekeys:SetKeysInIgnition(
     keysInIgnition --[[boolean]],
     canRemove      --[[boolean]]
 )
+```
+
+***
+
+### `IsKeysInIgnition` [#iskeysinignition-1]
+
+Check whether keys are currently in the ignition for a vehicle.
+
+```lua
+local keysInIgnition = exports.filo_vehiclekeys:IsKeysInIgnition(entity --[[entity|netId]])
 ```
 
 Shorthand helpers:
